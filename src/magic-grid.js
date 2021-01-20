@@ -16,8 +16,8 @@ export default {
       default: 5
     },
     maxColWidth: {
-      type: Number,
-      default: 280
+      type: String,
+      default: "280px"
     },
     animate: {
       type: Boolean, // Animate item positioning. Default: false.
@@ -73,7 +73,7 @@ export default {
 
       Array.prototype.forEach.call(this.items, item => {
         item.style.position = 'absolute'
-        item.style.maxWidth = this.maxColWidth + 'px'
+        item.style.maxWidth = this.maxColWidth
         if (this.animate) item.style.transition = 'top, left 0.2s ease'
       })
 
